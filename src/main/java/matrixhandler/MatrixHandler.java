@@ -18,13 +18,13 @@ public class MatrixHandler {
 
     public void inputMatrix() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите колличество строк матрицы: ");
+        System.out.println("Write count of matrix rows: ");
         this.rowsCount = scanner.nextInt();
-        System.out.println("Введите колличество столбцов матрицы: ");
+        System.out.println("Write count of matrix columns: ");
         this.columnsCount = scanner.nextInt();
 
         this.matrix = new int[rowsCount][columnsCount];
-        System.out.println("Введите матрицу размера " + rowsCount + " на " + columnsCount);
+        System.out.println("Write matrix with size " + rowsCount + " x " + columnsCount);
 
         for (int i = 0; i < rowsCount; ++i) {
             for (int j = 0; j < columnsCount; ++j) {
@@ -34,7 +34,7 @@ public class MatrixHandler {
     }
 
     public void outputMatrix() {
-        System.out.println("Наша матрица размера " + this.rowsCount + " на " + this.columnsCount);
+        System.out.println("Our matrix with size " + this.rowsCount + " x " + this.columnsCount);
         int intermediateOutputDistance = 3;
         int lenOutputMatrixSymbol = maxLenMatrixSymbol(this.matrix) + intermediateOutputDistance;
         String format = "%" + lenOutputMatrixSymbol + "d ";
@@ -79,7 +79,7 @@ public class MatrixHandler {
             }
             resultMatrix.setMatrix(outMatrix);
         } else {
-            System.err.println("Различные значения столбцов и строк у матриц при перемножении");
+            System.err.println("Different values of columns and rows in matrices when multiplying");
         }
         return resultMatrix;
     }
