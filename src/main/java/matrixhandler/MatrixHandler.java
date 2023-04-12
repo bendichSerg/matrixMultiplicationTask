@@ -16,7 +16,8 @@ public class MatrixHandler {
     private int rowsCount;
     private int columnsCount;
 
-    public void inputMatrix(Scanner scanner) {
+    public void inputMatrix() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("¬ведите колличество строк матрицы: ");
         this.rowsCount = scanner.nextInt();
         System.out.println("¬ведите колличество столбцов матрицы: ");
