@@ -36,7 +36,7 @@ public class MatrixHandler {
     public void outputMatrix() {
         System.out.println("Наша матрица размера " + this.rowsCount + " на " + this.columnsCount);
         int intermediateOutputDistance = 3;
-        int lenOutputMatrixSymbol = maxMatrSymbolLen(this.matrix) + intermediateOutputDistance;
+        int lenOutputMatrixSymbol = maxLenMatrixSymbol(this.matrix) + intermediateOutputDistance;
         String format = "%" + lenOutputMatrixSymbol + "d ";
         for (int i = 0; i < this.rowsCount; ++i) {
             for (int j = 0; j < this.columnsCount; ++j) {
@@ -46,7 +46,7 @@ public class MatrixHandler {
         }
     }
 
-    public int maxMatrSymbolLen(int[][] matrix) {
+    public int maxLenMatrixSymbol(int[][] matrix) {
         int len;
         int maxLen = 0;
         for (int i = 0; i < this.rowsCount; ++i) {
