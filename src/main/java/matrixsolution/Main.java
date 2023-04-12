@@ -1,4 +1,4 @@
-import matrixhandler.MatrixHandler;
+package matrixsolution;
 
 public class Main {
     public static void main(String[] args) {

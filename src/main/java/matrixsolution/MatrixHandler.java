@@ -1,4 +1,4 @@
-package matrixhandler;
+package matrixsolution;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -65,7 +65,6 @@ public class MatrixHandler {
         if (this.columnsCount == matrix.getRowsCount()) {
             int resultColumnsCount = matrix.getColumnsCount();
             int[][] multiplierMatrix = matrix.getMatrix();
-            matrix.outputMatrix();
 
             int[][] outMatrix = new int[this.rowsCount][resultColumnsCount];
             resultMatrix = new MatrixHandler(outMatrix, this.rowsCount, resultColumnsCount);
