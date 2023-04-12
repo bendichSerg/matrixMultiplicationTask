@@ -5,10 +5,8 @@ public class Main {
         MatrixHandler matrix = new MatrixHandler();
         MatrixHandler multiplierMatrix = new MatrixHandler();
 
-        matrix.inputMatrix();
-        multiplierMatrix.inputMatrix();
+        matrix.multiplyMatrix(multiplierMatrix);
+        matrix.outputMatrix();
 
-        MatrixHandler resultMatrix = matrix.multiplyMatrix(multiplierMatrix);
-        resultMatrix.outputMatrix();
     }
 }
