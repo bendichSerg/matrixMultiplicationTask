@@ -14,10 +14,8 @@ public class MatrixHandler {
 
     MatrixHandler() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Write count of matrix rows: ");
-        this.rowsCount = scanner.nextInt();
-        System.out.println("Write count of matrix columns: ");
-        this.columnsCount = scanner.nextInt();
+        inputRowsCount(scanner);
+        inputColumnsCount(scanner);
 
         this.matrix = new int[rowsCount][columnsCount];
         System.out.println("Write matrix with size " + rowsCount + " x " + columnsCount);
@@ -25,6 +23,16 @@ public class MatrixHandler {
         for (int i = 0; i < rowsCount; ++i) {
             inputArray(this.matrix[i], scanner);
         }
+    }
+
+    public void inputRowsCount(Scanner scanner){
+        System.out.println("Write count of matrix rows: ");
+        this.rowsCount = scanner.nextInt();
+    }
+
+    public void inputColumnsCount(Scanner scanner){
+        System.out.println("Write count of matrix columns: ");
+        this.columnsCount = scanner.nextInt();
     }
 
     public void inputArray(int[] array, Scanner scanner) {
@@ -45,7 +53,7 @@ public class MatrixHandler {
 
     public void outputArray(int[] array) {
         for (int i : array) {
-            System.out.printf("%3d ", i);
+            System.out.printf(" %d ", i);
         }
     }
 
@@ -62,7 +70,7 @@ public class MatrixHandler {
             setMatrix(outMatrix);
             setColumnsCount(resultColumnsCount);
         } else {
-            System.err.println("Different values of columns and rows in matrices when multiplying");
+            throw new IllegalArgumentException("Different values of columns and rows in matrices when multiplying");
         }
     }
 
