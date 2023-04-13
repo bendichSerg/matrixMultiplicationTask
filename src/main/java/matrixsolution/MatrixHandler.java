@@ -35,7 +35,7 @@ public class MatrixHandler {
         this.columnsCount = scanner.nextInt();
     }
 
-    public void inputArray(int[] array, Scanner scanner) {
+    private void inputArray(int[] array, Scanner scanner) {
         for (int i = 0; i < array.length; ++i) {
             array[i] = scanner.nextInt();
         }
@@ -51,7 +51,7 @@ public class MatrixHandler {
         }
     }
 
-    public void outputArray(int[] array) {
+    private void outputArray(int[] array) {
         for (int i : array) {
             System.out.printf(" %d ", i);
         }
@@ -74,11 +74,11 @@ public class MatrixHandler {
         }
     }
 
-    public boolean isMultiplied(int rowsCount) {
+    private boolean isMultiplied(int rowsCount) {
         return this.columnsCount == rowsCount;
     }
 
-    public int[] multiplyArrayByMatrixColumns(int[] array, int[][] matrix, int columnsCount) {
+    private int[] multiplyArrayByMatrixColumns(int[] array, int[][] matrix, int columnsCount) {
         int[] resultArray = new int[columnsCount];
         for (int columnNumber = 0; columnNumber < columnsCount; ++columnNumber) {
             for (int i = 0; i < array.length; ++i) {
