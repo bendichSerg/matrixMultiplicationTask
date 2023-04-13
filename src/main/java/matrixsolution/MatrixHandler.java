@@ -81,17 +81,10 @@ public class MatrixHandler {
     public int[] multiplyArrayByMatrixColumns(int[] array, int[][] matrix, int columnsCount) {
         int[] resultArray = new int[columnsCount];
         for (int columnNumber = 0; columnNumber < columnsCount; ++columnNumber) {
-            resultArray[columnNumber] = multiplyArrayByMatrixColumn(array, matrix, columnNumber);
+            for (int i = 0; i < array.length; ++i) {
+                resultArray[columnNumber] += array[i] * matrix[i][columnNumber];
+            }
         }
         return resultArray;
-    }
-
-
-    public int multiplyArrayByMatrixColumn(int[] array, int[][] matrix, int columnNumber) {
-        int resultElement = 0;
-        for (int i = 0; i < array.length; ++i) {
-            resultElement += array[i] * matrix[i][columnNumber];
-        }
-        return resultElement;
     }
 }
